@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style type="text/css">
+			.overlay {
+				top: 0;
+				left: 0;
+				position: fixed;
+				height: 100%;
+				width: 0;
+				background-color: rgba(0, 0, 0, 0.9);
+				overflow-x: hidden;
+				transition: 0.5s;
+			}
+			a {
+				text-decoration: none;
+				color: grey;
+				display: block;
+				padding: 15px;
+				font-size: 30px;
+			}
+			.closeBtn {
+				float: right;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="overlay">
+			<a href="javascript:void(0);" class="closeBtn"><i class="fas fa-window-close"></i></a>
+			<div class="menu">
+				<a href="javascript:void(0);">About</a>
+				<a href="javascript:void(0);">Services</a>
+				<a href="javascript:void(0);">Clients</a>
+				<a href="javascript:void(0);">Conctact</a>
+			</div>
+		</div>
+
+		<h2>Fullscreen Overlay Nav Example</h2>
+		<p>Click on the element below to open the full screen overlay navigation menu.</p>
+		<div class="openBtn">
+			<i class="fas fa-bars"></i> open
+		</div>
+
+		<script type="text/javascript">
+			$(".openBtn").click(function(){
+				$(".overlay").css("width", "100%");
+			});
+			$(".closeBtn").click(function(){
+				$(".overlay").css("width", "0");
+			});
+		</script>	
+	</body>
+</html>
