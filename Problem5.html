@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style type="text/css">
+			
+			.menu {
+				background-color: black;
+			}			
+			.menu a {
+				text-decoration: none;
+				color: white;
+				display: inline-block;
+				padding: 10px;
+			}
+			.active {
+				background-color: green;
+			}
+
+			.icon {
+				display: none !important;
+			}
+			@media only screen and (max-width: 600px) {
+				.menu {
+					position: relative;
+				}
+				.menu .icon {
+					display: block !important;
+					position: absolute;
+					top: 0;
+					right: 0;
+					background-color: grey;
+				}
+				.menu a:not(:first-child) {
+					display: none;
+				}
+				.Menu.responsive a {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu ">
+			<a href="javascript:void(0);" class="active">Menu</a>
+			<a href="">News</a>
+			<a href="">Contact</a>
+			<a href="">About</a>
+			<a href="javascript:void(0);" class="icon"><i class="fas fa-bars"></i></a>
+		</div>
+
+		<script type="text/javascript">
+			$(".menu").click(function() {
+				$(this).toggleClass("responsive");				
+			});
+		</script>
+	</body>
+</html>
